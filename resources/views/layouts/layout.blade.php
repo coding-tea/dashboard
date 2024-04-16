@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     @include('includes.css')
-    <style>
-        /* Add your custom styles here */
-        body {
-            overflow-x: hidden; /* Ensure no horizontal scrolling */
-        }
-    </style>
 </head>
 
 <body class="font-poppins antialiased bg-gray-100">
@@ -31,7 +25,7 @@
                         </svg>
                     </button>
                     <a href="#" class="flex ms-2 md:me-24">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="Logo" />
+                        <img src="{{ asset("assets/images/logo.png") }}" class="h-8 me-3" alt="Logo" />
                         <span
                             class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-gray-800">dashboard</span>
                     </a>
@@ -44,7 +38,7 @@
                                 aria-expanded="false" data-dropdown-toggle="dropdown-user">
                                 <span class="sr-only">Open user menu</span>
                                 <img class="w-8 h-8 rounded-full"
-                                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                                    src=" {{ asset("assets/images/picture-settings.png") }} "
                                     alt="user photo">
                             </button>
                         </div>
