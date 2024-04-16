@@ -8,6 +8,9 @@
     @include('includes.css')
     <style>
         /* Add your custom styles here */
+        body {
+            overflow-x: hidden; /* Ensure no horizontal scrolling */
+        }
     </style>
 </head>
 
