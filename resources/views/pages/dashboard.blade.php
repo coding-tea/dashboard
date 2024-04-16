@@ -5,12 +5,12 @@
 
     <div class="flex items-center justify-between gap-4 mb-4">
         <h2 class="text-2xl font-bold text-gray-800">Dashboard</h2>
-        <div class="flex items-center gap-4">
+        {{-- <div class="flex items-center gap-4">
             <label for="start-date" class="text-gray-600">Start date</label>
             <input type="date" id="start-date" class="rounded-md border border-gray-300 px-4 py-2">
             <label for="end-date" class="text-gray-600">End date</label>
             <input type="date" id="end-date" class="rounded-md border border-gray-300 px-4 py-2">
-        </div>
+        </div> --}}
     </div>
     <div class="grid grid-cols-1 gap-4 mb-4">
         <div class="bg-white rounded-md shadow-md p-4">
