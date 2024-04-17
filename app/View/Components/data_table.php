@@ -8,12 +8,15 @@ use Illuminate\View\Component;
 
 class data_table extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $title;
+    public $description;
+    public function __construct(
+        $title = "",
+        $description = "",
+    )
     {
-        //
+        $this->title = $title;
+        $this->description = $description;
     }
 
     /**
