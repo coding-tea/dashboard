@@ -3,11 +3,8 @@
 @section('title', 'components')
 @section('content')
 
-    @php
-        $class = \App\Enums\Alert::BLUE->value;
-    @endphp
-    <x-alert :class="$class">
-        hello world! this is a normal message.
-    </x-alert>
+    <x-card>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum accusantium corporis illo ducimus, delectus aliquid fugit exercitationem, nam ipsa pariatur omnis, sit laudantium vero? Incidunt omnis aliquam sit delectus? Temporibus?
+    </x-card>
 
 @endsection
