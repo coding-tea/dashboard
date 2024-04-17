@@ -6,17 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class tab extends Component
+class tab_content extends Component
 {
-    public $id;
-    public $tab;
-    public function __construct(
-        $id = "",
-        $tab = "",
-    )
+    /**
+     * Create a new component instance.
+     */
+    public function __construct()
     {
-        $this->id = $id;
-        $this->tab = $tab;
+        //
     }
 
     /**
@@ -24,6 +21,6 @@ class tab extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.tab');
+        return view('components.tab_content');
     }
 }
