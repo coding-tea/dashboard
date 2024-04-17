@@ -3,7 +3,7 @@
 @section('title', 'dashboard')
 @section('content')
 
-    <div class="w-100">
+    <div class="container mx-auto px-4">
         <div class="flex items-center justify-between gap-4 mb-4">
             <h2 class="text-2xl font-bold text-gray-800">Dashboard</h2>
             {{-- <div class="flex items-center gap-4">
