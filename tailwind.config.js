@@ -13,4 +13,7 @@ export default {
     require('flowbite/plugin')
   ],
 }
-
+module.exports = {
+  darkMode: false,
+  // Other configuration options...
+}
