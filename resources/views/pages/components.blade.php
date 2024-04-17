@@ -11,8 +11,7 @@
         </x-tabs>
         <x-tab_content>
             <x-tab_content_item id="tab1" tab="tab1-tab">
-                1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aspernatur maiores vero eaque repellendus
-                qui repudiandae amet quaerat alias optio voluptas omnis laborum! Eos sit quibusdam sed error nisi sunt.
+                1. Lorem
             </x-tab_content_item>
             <x-tab_content_item id="tab2" tab="tab2-tab">
                 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aspernatur maiores vero eaque repellendus
