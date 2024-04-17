@@ -8,12 +8,11 @@ use Illuminate\View\Component;
 
 class modal_btn extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
+    public $id;
+    public function __construct(
+        $id = "",
+    ) {
+        $this->id = $id;
     }
 
     /**
