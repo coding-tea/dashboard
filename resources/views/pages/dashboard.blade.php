@@ -27,6 +27,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 mb-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-white rounded-md shadow-md p-4">
                         <div class="flex items-center justify-between">
@@ -47,17 +49,6 @@
                         <div class="mt-4">
                             <div class="chart">
                                 <canvas id="new-customers-chart" width="400" height="200"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-md shadow-md p-4">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-lg font-bold text-gray-800">New orders</h3>
-                            <p class="text-sm text-green-600">30% increase</p>
-                        </div>
-                        <div class="mt-4">
-                            <div class="chart">
-                                <canvas id="new-orders-chart" width="400" height="200"></canvas>
                             </div>
                         </div>
                     </div>
