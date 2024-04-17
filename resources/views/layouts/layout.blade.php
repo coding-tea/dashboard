@@ -138,6 +138,8 @@
 
     <script>
         // JavaScript function to toggle sidebar visibility
+        var sidebar = document.getElementById('logo-sidebar');
+        sidebar.classList.toggle('-translate-x-full');
         document.getElementById('sidebarToggle').addEventListener('click', function () {
             var sidebar = document.getElementById('logo-sidebar');
             sidebar.classList.toggle('-translate-x-full');
