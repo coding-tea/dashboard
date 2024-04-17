@@ -7,12 +7,6 @@
         <div class="w-full">
             <div class="flex items-center justify-between gap-4 mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">Dashboard</h2>
-                {{-- <div class="flex items-center gap-4">
-            <label for="start-date" class="text-gray-600">Start date</label>
-            <input type="date" id="start-date" class="rounded-md border border-gray-300 px-4 py-2">
-            <label for="end-date" class="text-gray-600">End date</label>
-            <input type="date" id="end-date" class="rounded-md border border-gray-300 px-4 py-2">
-        </div> --}}
             </div>
             <div class="grid grid-cols-1 gap-4 mb-4">
                 <div class="bg-white rounded-md shadow-md p-4">
@@ -65,24 +59,6 @@
                             <div class="chart">
                                 <canvas id="new-orders-chart" width="400" height="200"></canvas>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white rounded-md shadow-md p-4">
-                    <h3 class="text-lg font-bold text-gray-800">Orders per month</h3>
-                    <div class="mt-4">
-                        <div class="chart">
-                            <canvas id="orders-per-month-chart" width="400" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-md shadow-md p-4">
-                    <h3 class="text-lg font-bold text-gray-800">Total customers</h3>
-                    <div class="mt-4">
-                        <div class="chart">
-                            <canvas id="total-customers-chart" width="400" height="200"></canvas>
                         </div>
                     </div>
                 </div>
