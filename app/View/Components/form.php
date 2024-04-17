@@ -8,12 +8,17 @@ use Illuminate\View\Component;
 
 class form extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
+    public $action;
+    public $title;
+    public $description;
+    public function __construct(
+        $action = "",
+        $title = "",
+        $description = "",
+    ) {
+        $this->action = $action;
+        $this->title = $title;
+        $this->description = $description;
     }
 
     /**
