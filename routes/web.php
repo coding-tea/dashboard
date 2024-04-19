@@ -9,3 +9,8 @@ Route::get('/', function () {
 Route::get('/c', function () {
     return view('pages.components');
 });
+
+
+Route::any('{catchall}', function(){
+    return view("layouts.404");
+})->where('catchall', '.*');
