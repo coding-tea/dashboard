@@ -15,3 +15,8 @@
         }
     }
 </script>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>  
