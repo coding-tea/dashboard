@@ -2,8 +2,8 @@
     <button @click="isOpen = !isOpen; $nextTick(() => {isOpen ? $refs.userMenu.focus() : null})"
         class="transition-opacity rounded-lg opacity-80 hover:opacity-100 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-offset-white focus:ring-offset-2">
         <img class="w-10 h-10 rounded-lg shadow-md"
-            src="https://avatars.githubusercontent.com/u/57622665?s=460&u=8f581f4c4acd4c18c33a87b3e6476112325e8b38&v=4"
-            alt="Ahmed Kamel" />
+            src="{{ asset("assets/images/logo.png") }}"
+            alt="dashboard logo" />
         <span class="sr-only">User menu</span>
     </button>
     <div x-show="isOpen" @click.away="isOpen = false" @keydown.escape="isOpen = false"
