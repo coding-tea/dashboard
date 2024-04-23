@@ -50,7 +50,7 @@
                     </a>
 
                     <!-- User avatar button -->
-                    <x-layout.user-menu></x-layout.user-menu>
+                    <x-layout.user-menu-mobile></x-layout.user-menu-mobile>
 
                 </nav>
 
@@ -69,7 +69,7 @@
                     <x-layout.menu-buttons></x-layout.menu-buttons>
 
                     <!-- User avatar -->
-                    <x-layout.user-menu-two></x-layout.user-menu-two>
+                    <x-layout.user-menu></x-layout.user-menu>
                 </nav>
 
                 <x-layout.menu></x-layout.menu>
