@@ -43,10 +43,10 @@
                     </button>
 
                     <!-- Logo -->
-                    <a href="#">
+                    <a href="/">
                         <img class="w-10 h-auto"
-                            src="https://raw.githubusercontent.com/kamona-ui/dashboard-alpine/main/public/assets/images/logo.png"
-                            alt="K-UI" />
+                            src="{{ asset("assets/images/logo.png") }}"
+                            alt="dashboard logo" />
                     </a>
 
                     <!-- User avatar button -->
@@ -153,7 +153,7 @@
                     </path>
                 </svg>
             </a>
-            <a href="https://github.com/Kamona-WD" target="_blank"
+            <a href="https://github.com/coding-tea" target="_blank"
                 class="transition-transform transform hover:scale-125">
                 <span class="sr-only">Github</span>
                 <svg aria-hidden="true" class="w-8 h-8 text-black" fill="currentColor"
