@@ -6,14 +6,21 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class user-menu-two extends Component
+class user-menu extends Component
 {
-    /**
-     * Create a new component instance.
-     */
+    public $menu;
+
     public function __construct()
     {
-        //
+        $this->menu = [
+            [
+                "icon" => "",
+                "title" => "",
+                "submenu" = [
+                    
+                ],
+            ]
+        ];
     }
 
     /**
@@ -21,6 +28,6 @@ class user-menu-two extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.user-menu-two');
+        return view('components.layout.user-menu');
     }
 }
