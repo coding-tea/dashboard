@@ -10,8 +10,6 @@
         <a href="{{ route("profile.edit") }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile
             x</a>
 
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings x</a>
-
         <a href="#" onclick="logout()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             role="menuitem">Sign out x</a>
 

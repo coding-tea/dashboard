@@ -3,6 +3,6 @@
 use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/hello', function ($id) {
-    return "hello world";
+Route::get('/c', function () {
+    return view("pages.components");
 });

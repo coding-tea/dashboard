@@ -54,4 +54,16 @@
             </div>
         </form>
     </x-card>
+
+    <x-card>
+        <x-datatable 
+            title="Your Datatable Title" 
+            description="Your Datatable Description" 
+            :heads="$heads" 
+            :actions="$actions" 
+            :queryBuilder="$queryBuilder" 
+            {{-- :editRoute=""
+            :deleteRoute="" --}}
+        />
+    </x-card>
 @endsection
