@@ -119,12 +119,17 @@
                     </div>
                 </header>
 
-                <div class="flex flex-1">
+                <div class="flex flex-1 w-full">
                     <!-- Main -->
-                    <main class="flex justify-center flex-1 px-4 py-8">
-                        @yield('content')
+                    <main class="flex justify-center flex-1 px-4 py-8 w-full">
+                        <div class="container mx-auto">
+                            <div class="w-full">
+                                @yield('content')
+                            </div>
+                        </div>
                     </main>
                 </div>
+
             </div>
         </div>
 
