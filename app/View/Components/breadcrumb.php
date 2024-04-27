@@ -8,12 +8,10 @@ use Illuminate\View\Component;
 
 class breadcrumb extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $breadcrumb;
+    public function __construct($breadcrumb)
     {
-        //
+        $this->breadcrumb = $breadcrumb;
     }
 
     /**
