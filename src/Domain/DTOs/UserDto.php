@@ -9,7 +9,7 @@ class UserDto extends DTO
 {
 
     public function __construct(
-        public readonly String $username,
+        public readonly String $name,
         public readonly String $email,
         public readonly String $password,
     ) {
@@ -19,7 +19,7 @@ class UserDto extends DTO
     public static function fromRequest(Request $request)
     {
         return new self(
-            username: $request->username,
+            name: $request->name,
             email: $request->email,
             password: $request->password,
         );
@@ -28,7 +28,7 @@ class UserDto extends DTO
     public static function fromModel(User $user)
     {
         return new self(
-            username: $user->username,
+            name: $user->name,
             email: $user->email,
             password: $user->password,
         );

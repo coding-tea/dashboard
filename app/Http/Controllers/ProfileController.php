@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\View\Components\breadcrumb_item;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,9 +12,16 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display the user's profile form.
-     */
+    
+    public function index(){
+        $breadcrumb = [
+            new breadcrumb_item(title : "profile", route : "", current_page : false),
+            new breadcrumb_item(title : "profile", route : "", current_page : true),
+        ];
+        
+        return view("pages.profile.edit", compact("breadcrumb"));
+    }
+
     public function edit(Request $request): View
     {
         return view('profile.edit', [

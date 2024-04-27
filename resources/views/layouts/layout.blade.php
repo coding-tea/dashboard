@@ -123,6 +123,10 @@
                     <!-- Main -->
                     <main class="flex justify-center flex-1 px-4 py-8 w-full">
                         <div class="container mx-auto">
+                            {{-- breadcrumb --}}
+                            @yield('breadcrumb')
+
+                            {{-- main content --}}
                             <div class="w-full">
                                 @yield('content')
                             </div>
