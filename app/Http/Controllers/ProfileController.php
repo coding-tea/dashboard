@@ -38,8 +38,8 @@ class ProfileController extends Controller
             "DeleteSelected" => route('/c'), //delete slected route
         ];
 
-        $alert = $this->warning("title example", "description example");
-        return view("pages.profile.edit", compact("breadcrumb", "queryBuilder", "heads", "actions", "alert"));
+        $this->warning("title example", "description example");
+        return view("pages.profile.edit", compact("breadcrumb", "queryBuilder", "heads", "actions"));
     }
 
     public function edit(Request $request): View
