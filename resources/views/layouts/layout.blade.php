@@ -137,13 +137,9 @@
             </div>
         </div>
 
-
-
-{{-- 
-        <div x-show="isSettingsPanelOpen" class="fixed inset-0 bg-black bg-opacity-50"
+        {{-- <div x-show="isSettingsPanelOpen" class="fixed inset-0 bg-black bg-opacity-50"
             @click="isSettingsPanelOpen = false" aria-hidden="true">
         </div>
-
         <!-- Author links -->
         <div class="fixed flex items-center space-x-4 bottom-20 right-5 sm:bottom-5">
             <a href="https://twitter.com/ak_kamona" target="_blank"
@@ -167,6 +163,7 @@
                 </svg>
             </a>
         </div> --}}
+
     </div>
 
     @include('includes.script')
