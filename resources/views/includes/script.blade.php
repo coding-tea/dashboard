@@ -28,7 +28,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js
 https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css
 " rel="stylesheet">
 
-@isset($alert)
+@if(session('alert'))
+    @php
+        $alert = session('alert');
+    @endphp
     <script>
         var alertJson = @json($alert);
         console.log(alertJson);
@@ -38,4 +41,4 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css
             icon: alertJson.alert.icon,
         });
     </script>
-@endisset
+@endif
