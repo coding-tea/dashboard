@@ -13,7 +13,8 @@ class datatable extends Component
     public $heads;
     public $actions;
     public $queryBuilder;
-    public $data;
+    public $showRoute;
+    public $deleteRoute;
 
     public function __construct(
         $queryBuilder,
@@ -21,6 +22,8 @@ class datatable extends Component
         $description = "",
         $heads,
         $actions,
+        $showRoute,
+        $deleteRoute,
     )
     {
         $this->queryBuilder = $queryBuilder;
@@ -28,6 +31,8 @@ class datatable extends Component
         $this->description = $description;
         $this->heads = $heads;
         $this->actions = $actions;
+        $this->showRoute = $showRoute;
+        $this->deleteRoute = $deleteRoute;
     }
 
     /**

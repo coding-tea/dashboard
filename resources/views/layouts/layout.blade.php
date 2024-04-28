@@ -119,15 +119,15 @@
                     </div>
                 </header>
 
-                <div class="flex flex-1 w-full">
+                <div class="flex flex-1 w-full max-h-10">
                     <!-- Main -->
-                    <main class="flex justify-center flex-1 px-4 py-8 w-full">
+                    <main class="flex justify-center flex-1 px-4 py-8 w-full h-full">
                         <div class="container mx-auto">
                             {{-- breadcrumb --}}
                             @yield('breadcrumb')
 
                             {{-- main content --}}
-                            <div class="w-full">
+                            <div class="w-full h-full">
                                 @yield('content')
                             </div>
                         </div>
@@ -137,14 +137,12 @@
             </div>
         </div>
 
-        <!-- Panels -->
 
-        <!-- Settings Panel -->
-        <!-- Backdrop -->
+
+{{-- 
         <div x-show="isSettingsPanelOpen" class="fixed inset-0 bg-black bg-opacity-50"
-            @click="isSettingsPanelOpen = false" aria-hidden="true"></div>
-
-
+            @click="isSettingsPanelOpen = false" aria-hidden="true">
+        </div>
 
         <!-- Author links -->
         <div class="fixed flex items-center space-x-4 bottom-20 right-5 sm:bottom-5">
@@ -168,7 +166,7 @@
                     </path>
                 </svg>
             </a>
-        </div>
+        </div> --}}
     </div>
 
     @include('includes.script')

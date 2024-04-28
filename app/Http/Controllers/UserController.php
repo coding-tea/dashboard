@@ -15,7 +15,7 @@ class UserController extends Controller
     public $folder;
 
     public function __construct(
-        public UserService $userService,
+        public UserService $service,
     ) {
         $this->route = "";
         $this->folder = "";
@@ -33,7 +33,7 @@ class UserController extends Controller
 
     public function store(UserRequest $request)
     {
-        $user = $this->userService->store(
+        $user = $this->service->store(
             UserDto::fromRequest($request)
         );
 
@@ -42,7 +42,7 @@ class UserController extends Controller
 
     public function update(User $user, UserRequest $request)
     {
-        $this->userService->update(
+        $this->service->update(
             $user,
             UserDto::fromRequest($request)
         );
@@ -52,14 +52,14 @@ class UserController extends Controller
 
     public function delete(User $user)
     {
-        $this->userService->delete($user);
+        $this->service->delete($user);
 
         return redirect()->route($this->route . ".index");
     }
 
     public function destroy($arr)
     {
-        $this->userService->deleteArrayOfIds($arr);
+        $this->service->deleteArrayOfIds($arr);
 
         return redirect()->route($this->route . ".index");
     }
