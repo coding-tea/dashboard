@@ -58,7 +58,6 @@
             </tr>
         </thead>
         <tbody>
-            {{-- @dd($queryBuilder) --}}
             @isset($queryBuilder)
                 @foreach ($queryBuilder->toArray()['data'] as $key => $value)
                     <tr>
@@ -78,9 +77,12 @@
                         <td class="px-6 py-4 text-end">
                             <a href="{{ $showRoute }}"
                                 class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">View</a>
-                            <a href="{{ $deleteRoute }}"
-                                class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-800 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100"><i
-                                    class="bi bi-archive-fill"></i></a>
+                            <button onclick="deleteBtn()"
+                                class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-800 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">
+                                <i class="bi bi-archive-fill"></i>
+                            </button>
+                            <a href="{{ $deleteRoute }}" id="deleteLink" style="display: none"></a>
+
                         </td>
                     </tr>
                 @endforeach
@@ -102,6 +104,27 @@
                 checkbox.checked = true;
             } else {
                 checkbox.checked = false;
+            }
+        });
+    }
+
+    function deleteBtn() {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.querySelector("#deleteLink").click();
+                // Swal.fire({
+                //     title: "Deleted!",
+                //     text: "Your file has been deleted.",
+                //     icon: "success"
+                // });
             }
         });
     }

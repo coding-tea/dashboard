@@ -20,7 +20,7 @@
             </div>
 
             <!-- Sidebar -->
-            <div class="flex flex-shrink-0 transition-all" style="position: fixed; height: 100vh;">
+            <div class="flex flex-shrink-0 transition-all" style="position: fixed; height: 100vh; z-index: 99999;">
                 <div x-show="isSidebarOpen" @click="isSidebarOpen = false"
                     class="fixed inset-0 z-10 bg-black bg-opacity-50 lg:hidden"></div>
                 <div x-show="isSidebarOpen" class="fixed inset-y-0 z-10 w-16 bg-white"></div>
