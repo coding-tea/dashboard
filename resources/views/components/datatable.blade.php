@@ -8,7 +8,7 @@
         </div>
         <div>
             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="text-white bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
                 type="button">Actions <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -16,18 +16,15 @@
                 </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownDefaultButton">
                     <li>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">add
-                            new</a>
+                        <a href="{{ $actions['Add'] }}" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Add
+                            New</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">delete
-                            selected</a>
+                        <a href="{{ $actions['DeleteSelected'] }}" class="block px-4 py-2 hover:bg-gray-100">Delete
+                            Selected</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +40,7 @@
                 @endphp
                 @isset($heads)
                     <th class="px-6 py-3">
-                        <input type="checkbox"
+                        <input type="checkbox" onclick="selectAll(this)"
                             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ids" />
                     </th>
                     @foreach ($heads as $item)
@@ -79,10 +76,10 @@
                         @endforeach
 
                         <td class="px-6 py-4 text-end">
-                            <a href="#"
+                            <a href="{{ $showRoute }}"
                                 class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">View</a>
-                            <a href="#"
-                                class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100"><i
+                            <a href="{{ $deleteRoute }}"
+                                class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-800 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100"><i
                                     class="bi bi-archive-fill"></i></a>
                         </td>
                     </tr>
@@ -95,3 +92,17 @@
         {{ $queryBuilder->links() }}
     </div>
 </div>
+
+
+<script>
+    function selectAll(self) {
+        let checkboxes = document.querySelectorAll('.ids');
+        checkboxes.forEach(checkbox => {
+            if (self.checked) {
+                checkbox.checked = true;
+            } else {
+                checkbox.checked = false;
+            }
+        });
+    }
+</script>

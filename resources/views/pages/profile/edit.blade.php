@@ -56,14 +56,7 @@
     </x-card>
 
     <x-card>
-        <x-datatable 
-            title="Your Datatable Title" 
-            description="Your Datatable Description" 
-            :heads="$heads" 
-            :actions="$actions" 
-            :queryBuilder="$queryBuilder" 
-            {{-- :editRoute=""
-            :deleteRoute="" --}}
-        />
+        <x-datatable title="Your Datatable Title" description="Your Datatable Description" :heads="$heads"
+            :actions="$actions" :queryBuilder="$queryBuilder" :showRoute="route('/c')" :deleteRoute="route('/c')" />
     </x-card>
 @endsection
