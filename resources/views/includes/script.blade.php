@@ -19,4 +19,23 @@
     tailwind.config = {
         darkMode: 'class',
     }
-</script>  
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css
+" rel="stylesheet">
+
+@isset($alert)
+    <script>
+        var alertJson = @json($alert);
+        console.log(alertJson);
+        Swal.fire({
+            title: alertJson.alert.title,
+            text: alertJson.alert.text,
+            icon: alertJson.alert.icon,
+        });
+    </script>
+@endisset
