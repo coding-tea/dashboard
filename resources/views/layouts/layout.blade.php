@@ -70,7 +70,7 @@
 
                 <x-layout.menu></x-layout.menu>
             </div>
-            <div class="flex flex-col flex-1">
+            <div class="flex flex-col flex-1 bg-gray-100" style="height: 100vh;">
                 <header class="relative flex items-center justify-between flex-shrink-0 p-4">
 
                     <!-- Mobile sub header button -->
@@ -119,7 +119,7 @@
                     </div>
                 </header>
 
-                <div class="flex flex-1 w-full max-h-10">
+                <div class="flex flex-1 w-full bg-gray-100">
                     <!-- Main -->
                     <main class="flex justify-center flex-1 px-4 py-8 w-full h-full">
                         <div class="container mx-auto">
