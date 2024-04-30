@@ -11,7 +11,7 @@
             <div class="grid grid-cols-1 gap-4 mb-4">
                 <div class="bg-white rounded-md shadow-md p-4">
                     <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-bold text-gray-800">Welcome Back!</h3>
+                        <h3 class="text-lg font-bold text-gray-800">Welcome Back! khay reda</h3>
                         <button type="button" class="flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-white">
                             <i class="fa fa-sign-out-alt"></i>
                             Sign out
